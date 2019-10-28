@@ -87,3 +87,24 @@ public void ApplyLearning()
         }  
     }  
 }  
+
+    public void Train(double[] input, double[] desiredResult)  
+{  
+    int i;  
+    if (input.Length != m_inputLayer.Count)  
+        throw new ArgumentException(string.Format("Expecting {0} inputs for this net", m_inputLayer.Count));  
+    // initialize data  
+    for (i = 0; i < m_inputLayer.Count; i++)  
+    {  
+        Neuron n = m_inputLayer[i] as Neuron;  
+        if (null != n) // maybe make interface get;set;  
+            n.Output = input[i];  
+    }  
+    Pulse();  
+    BackPropogation(desiredResult);   
+}  
+public void Train(double[][] inputs, double[][] expected)  
+{  
+    for (int i = 0; i < inputs.Length; i++)  
+        Train(inputs[i], expected[i]);  
+}  
