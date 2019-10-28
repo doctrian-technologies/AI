@@ -20,3 +20,11 @@ In order for our neural net to have the ability to learn, after our signal trave
 One of the cool things about neural networks is that after they learn through this iterative process and are fully trained, they can calculate output for input they have never encountered before which makes them ideal for pattern recognition and gaming AI.
 
 ##### This Repo contains some actual C# interfaces to represent a neural network.
+I want to train a neural net to perform an XOR operation on two bits. Here I built a neural net with two input neurons, two hidden neurons, and one output neuron.
+
+##### The four simple steps for my neural net learning are as follows:
+###### Step 1: Set input data into perception layer
+###### Step 2: Pulse()
+###### Step 3: BackPropogate()
+###### Step 4: ApplyLearning()
+
