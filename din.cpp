@@ -1,4 +1,4 @@
 public interface TriNeuronReceptor  
 {  
-    Dictionary<INeuronSignal, NeuralFactor> Input { get; }  
+    Dictionary<TriNeuronSignal, NeuralFactor> Input { get; }  
 } 
