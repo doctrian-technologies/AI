@@ -1,36 +1,40 @@
+/// <summary>
+/// Represents a weight factor in a neural network, including its current value and adjustment (delta).
+/// </summary>
 public class NeuralFactor  
 {  
     #region Constructors  
+    /// <summary>
+    /// Initializes a new instance of the <see cref="NeuralFactor"/> class with a specified weight.
+    /// </summary>
+    /// <param name="weight">The initial weight value.</param>
     public NeuralFactor(double weight)  
     {  
-        m_weight = weight;  
-        m_delta = 0;  
+        Weight = weight;  
+        Delta = 0.0;  
     }  
-    #endregion  
- 
-    #region Member Variables  
-    private double m_weight;  
-    private double m_delta;  
     #endregion  
  
     #region Properties  
-    public double Weight  
-    {  
-        get { return m_weight; }  
-        set { m_weight = value; }  
-    }  
-    public double Delta  
-    {  
-        get { return m_delta; }  
-        set { m_delta = value; }  
-    }  
+    /// <summary>
+    /// Gets or sets the weight of the factor.
+    /// </summary>
+    public double Weight { get; set; }  
+
+    /// <summary>
+    /// Gets or sets the adjustment to the weight (delta).
+    /// </summary>
+    public double Delta { get; set; }  
     #endregion  
- 
+
     #region Methods  
+    /// <summary>
+    /// Applies the current delta to the weight and resets the delta to zero.
+    /// </summary>
     public void ApplyDelta()  
     {  
-        m_weight += m_delta;  
-        m_delta = 0;  
+        Weight += Delta;  
+        Delta = 0.0;  
     }  
     #endregion  
-} 
+}
