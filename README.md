@@ -1,30 +1,42 @@
-# Welcome to the Doctrian AI Repository!
+# Doctrian AI Repository
 
-### The Repository is open to all and I invite anyone working in the field of AI to contribute to this resource.
+## Welcome!
 
-## The Neural Network.
+Welcome to the **Doctrian AI** repository! This open-source project invites AI practitioners, enthusiasts, and developers to contribute to a valuable resource for learning and innovation in artificial intelligence.
 
-Basically, each neuron in our brain accepts input from many other neurons and then provides a resulting output. Each neuron can have multiple inputs and the neurons will be grouped in layers. While processing a signal (we'll call it a "pulse"), the signal will start at the top layer flowing through and being modified by each neuron in that layer. 
-Each neuron will modify the strength of the pulse. After the modification has been completed, the "pulse" will travel to the next layer and be modified again.
+## Overview of the Neural Network
 
-Now that you have the details, let's take a step back and see how a large number of cells create a "neural net", or a network of neurons. For a neural net to work, we need at least three groupings of neurons. The top layer is used by the neural net to perceive the environment and is often called the "perception" or "input" layer.  
+A neural network mimics the way our brains process information. Each neuron receives inputs from multiple other neurons and generates an output. Neurons are organized into layers, where a signal—termed a **"pulse"**—originates at the input layer, traverses through hidden layers, and is modified at each neuron before reaching the output layer.
 
-This is where we will set initial values to be passed through the net with the pulse. The bottom later is where the neural net will expose the final output of our pulse. Notice these neurons don't send their signal anywhere. After the pulse travels to this layer, we'll go pick up the values on the output neurons as the final output of our network's processing. 
+### Structure of the Neural Network
 
-All the neurons in the middle layer(s) process the pulse as it travels through the net but are not exposed as direct input or output of the net.  This is often called the "hidden" layer.
+1. **Input Layer**: This layer collects information from the environment and initializes values for the pulse.
+2. **Hidden Layers**: These intermediate layers process the pulse without directly exposing their outputs.
+3. **Output Layer**: This layer presents the final results of the processing, which are collected without further transmission.
 
-#### Making the network learn through back propagation.
+## Learning through Backpropagation
 
-In order for our neural net to have the ability to learn, after our signal travels from the top of our net to the bottom, we have to update how each neuron will affect the next pulse that travels the network. This is done by a process called back propagation.  Basically we figure out a figure representing the level of error that our network produced. This is arrived at by comparing the expected output of the net to the actual output.
+To enable learning, the network updates how each neuron influences subsequent pulses after the signal travels from the input to the output layer. This is achieved through **backpropagation**, which calculates the error by comparing the expected output to the actual output.
 
-One of the cool things about neural networks is that after they learn through this iterative process and are fully trained, they can calculate output for input they have never encountered before which makes them ideal for pattern recognition and gaming AI.
+Neural networks can generalize from their training data, allowing them to produce accurate outputs for previously unseen inputs. This capability makes them ideal for tasks like pattern recognition and gaming AI.
 
-##### This Repo contains some actual C# interfaces to represent a neural network.
-I want to train a neural net to perform an XOR operation on two bits. Here I built a neural net with two input neurons, two hidden neurons, and one output neuron.
+## XOR Neural Network Example
 
-##### The four simple steps for my neural net learning are as follows:
-###### Step 1: Set input data into perception layer
-###### Step 2: Pulse()
-###### Step 3: BackPropogate()
-###### Step 4: ApplyLearning()
+This repository includes C# interfaces designed to represent a neural network. A specific example demonstrates training a neural network to perform an **XOR operation** on two bits, structured with:
 
+- **2 Input Neurons**
+- **2 Hidden Neurons**
+- **1 Output Neuron**
+
+### Learning Steps
+
+The neural network learning process consists of four essential steps:
+
+1. **Set Input Data**: Initialize the input data in the perception layer.
+2. **Pulse**: Activate the network to process the inputs.
+3. **Backpropagate**: Calculate and propagate the errors back through the network.
+4. **Apply Learning**: Update the weights based on the errors to improve accuracy.
+
+## Get Involved!
+
+Feel free to explore the repository, contribute your ideas, and enhance the project! Together, we can advance our understanding of AI and its applications.
